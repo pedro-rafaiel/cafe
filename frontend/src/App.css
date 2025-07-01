@@ -1,0 +1,165 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #3b2f2f;
+  scroll-behavior: smooth;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.background {
+  background-image: url('./images/detalhes.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.overlay {
+  backdrop-filter: blur(4px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.cup-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cup {
+  width: 110px;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.vapor {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 25px;
+  height: 70px;
+  background: linear-gradient(to top, rgba(255,255,255,0.4), transparent);
+  border-radius: 50%;
+  animation: subir 2.5s infinite ease-in-out;
+  transform: translateX(-50%);
+}
+
+@keyframes subir {
+  0% { transform: translate(-50%, 0) scale(1); opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { transform: translate(-50%, -50px) scale(1.3); opacity: 0; }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4e342e;
+  margin: 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #6b4c3b;
+  margin-bottom: 2.5rem;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.app-container {
+  text-align: center;
+  background: url('https://agroadvance.com.br/wp-content/uploads/2023/07/cafe-arabica.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  padding: 30px;
+}
+
+.abas {
+  margin: 30px 0;
+}
+
+.abas button {
+  margin: 0 10px;
+  padding: 10px 24px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.abas button.ativa,
+.abas button:hover {
+  background: #4e342e;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.conteudo {
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 900px;
+  margin: 0 auto;
+  color: #4b3e2a;
+}
+.cafes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn-pedir {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f59e0b;
+  border: none;
+  border-radius: 9999px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-pedir:hover {
+  background-color: #d97706;
+}

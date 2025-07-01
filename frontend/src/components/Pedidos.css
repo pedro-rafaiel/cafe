@@ -1,0 +1,80 @@
+.pedidos-container {
+  padding: 30px;
+  background: #fffefc;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0e9e0;
+}
+
+.pedidos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pedido-item {
+  background: #fff6e9;
+  border: 1px solid #e0d4c0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pedido-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pedido-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pedido-info {
+  flex: 1;
+}
+
+.pedido-info strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #4b3e2a;
+}
+
+/* Lista dos itens do pedido */
+.pedido-itens {
+  list-style: disc inside;
+  padding-left: 0;
+  margin-top: 8px;
+  color: #5a4d3a;
+  font-size: 0.95rem;
+}
+
+.pedido-itens li {
+  margin-bottom: 4px;
+}
+
+/* Botão no lado direito */
+.pedido-item button {
+  background: linear-gradient(90deg, #4caf50, #388e3c);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-left: 20px;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.pedido-item button:hover {
+  background: linear-gradient(90deg, #388e3c, #2e7d32);
+  transform: scale(1.05);
+}
